@@ -1,0 +1,109 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true, // Tell VSCode to format files on save
+  // "editor.defaultFormatter": "esbenp.prettier-vscode", // Tell VSCode to use Prettier as default file formatter
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "files.eol": "\n",
+  "folderTemplates.structures": [
+    {
+      "name": "TS Component Template",
+      "openFilesWhenDone": ["<FTName | pascalcase>.tsx"],
+      "structure": [
+        {
+          "fileName": "<FTName | pascalcase>.tsx",
+          "template": "Typescript React Component"
+        },
+        {
+          "fileName": "index.tsx",
+          "template": "IndexFile"
+        },
+        {
+          "fileName": "<FTName | pascalcase>.module.scss",
+          "template": "Component Stylesheet"
+        },
+        {
+          "fileName": "<FTName | pascalcase>.types.ts",
+          "template": "Component Types"
+        },
+        {
+          "fileName": "<FTName | pascalcase>.constants.ts",
+          "template": "Component Constants"
+        }
+      ]
+    },
+    {
+      "name": "TS Container Template",
+      "openFilesWhenDone": ["<FTName | pascalcase>.tsx"],
+      "structure": [
+        {
+          "fileName": "<FTName | pascalcase>.tsx",
+          "template": "Typescript React Component"
+        },
+        {
+          "fileName": "index.tsx",
+          "template": "IndexFile"
+        },
+        {
+          "fileName": "<FTName | pascalcase>.module.scss",
+          "template": "Component Stylesheet"
+        },
+        {
+          "fileName": "<FTName | pascalcase>.types.ts",
+          "template": "Component Types"
+        },
+        {
+          "fileName": "<FTName | pascalcase>.constants.ts",
+          "template": "Component Constants"
+        }
+      ]
+    }
+  ],
+  "folderTemplates.fileTemplates": {
+    "Typescript React Component": [
+      "import React from 'react';",
+      "",
+      "import {<FTName | pascalcase>Props} from './<FTName | pascalcase>.types';",
+      "import Styles from './<FTName | pascalcase>.module.scss';",
+      "import Constants from './<FTName | pascalcase>.constants'",
+      "",
+      "const <FTName | pascalcase> = (props : <FTName | pascalcase>Props) => {",
+      "  return (",
+      "    <div><FTName | pascalcase></div>",
+      "  )",
+      "}",
+      "",
+      "export default <FTName | pascalcase>"
+    ],
+    "Component Stylesheet": [
+      "@use '@sass/base/fonts';",
+      "@use '@sass/base/colors';",
+      "@use '@sass/utilities/functions' as *;",
+      "",
+      ".<FTName | camelcase> {",
+      " background-color: colors.$canacBlue;",
+      "}"
+    ],
+    "IndexFile": [
+      "import <FTName | pascalcase> from './<FTName | pascalcase>';",
+      "",
+      "export default <FTName | pascalcase>;"
+    ],
+    "Component Types": [
+      "export interface <FTName | pascalcase>Props {",
+      "  /**",
+      "   * ComponentType documentation",
+      "   */",
+      "  /*prop: type;*/",
+      "}"
+    ],
+    "Component Constants": [
+      "const <FTName | uppercase>_CONSTANT = ''",
+      "",
+      "export default { <FTName | uppercase>_CONSTANT }"
+    ]
+  },
+  "discord.enabled": true
+}

@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "plugins": ["@typescript-eslint", "react"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-base",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 14,
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off", // Displays warning if we have unused variables in the project
+    "@typescript-eslint/no-explicit-any": "error", // Displays error if we try to set any type explicitly
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/no-empty-function": "off",
+    "import/prefer-default-export": "warn",
+    "no-undef": "warn",
+    "no-unused-vars": "off", // Displays warning if we have unused variables in the project
+    "no-console": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "eol-last": "off",
+    "linebreak-style": "off",
+    "semi": "warn",
+    "object-curly-newline": "off",
+    "comma-spacing": "warn",
+    "operator-linebreak": "off",
+    "comma-dangle": "off",
+    "implicit-arrow-linebreak": "off",
+    "no-underscore-dangle": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.stories.tsx"],
+      "rules": {
+        "react-hooks/rules-of-hooks": "off"
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
