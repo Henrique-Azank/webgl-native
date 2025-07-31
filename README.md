@@ -1,8 +1,8 @@
-# Three.js native app
+# WebGL native app
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Created this repository as a way to render Three.js scenes in a separate environment with access to the user's local file system and other
+Created this repository as a way to render WebGL and Three.js scenes in a separate environment with access to the user's local file system and other
 utilities that a framework like Tauri enables. The intention is to provide a nice environment for testing out 3D-based applications in a 
 way that we can leverage both the powerful WebGL API and not to be overly concerned over building requirements for different platforms.
 
