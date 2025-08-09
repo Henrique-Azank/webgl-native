@@ -1,15 +1,15 @@
 "use client";
 
-// Base dependencies
-import { useRouter } from "next/navigation";
+// Hook dependencies
+import useNavigate from "@/hooks/useNavigate";
 
 // Component dependencies
 import Styles from "./page.module.scss";
 
 // Main page component
 export default function Page() {
-  // Initialize router
-  const router = useRouter();
+  // Navigator
+  const navigate = useNavigate();
 
   return (
     <div className={Styles.MainPage}>
@@ -21,18 +21,12 @@ export default function Page() {
       {/* Examples navigator */}
       <div>
         {/* Example 1 - Basic rendering of a 2D object using pure WebGL */}
-        <div
-          className={Styles.Text}
-          onClick={() => router.push("/examples/basic-2d")}
-        >
+        <div className={Styles.Text} onClick={navigate("/examples/basic-2d")}>
           <h3>Basic 2D rendering using WebGL</h3>
         </div>
 
         {/* Example 2 - Basic rendering of a 3D object using pure WebGL */}
-        <div
-          className={Styles.Text}
-          onClick={() => router.push("/examples/basic-3d")}
-        >
+        <div className={Styles.Text} onClick={navigate("/examples/basic-3d")}>
           <h3>Basic 3D rendering using WebGL</h3>
         </div>
       </div>
