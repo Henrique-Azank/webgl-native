@@ -1,0 +1,3 @@
+const EXAMPLEPAGE_CONSTANT = ''
+
+export default { EXAMPLEPAGE_CONSTANT }

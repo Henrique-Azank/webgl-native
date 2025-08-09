@@ -1,0 +1,3 @@
+const WEBGLCONTAINER_CONSTANT = ''
+
+export default { WEBGLCONTAINER_CONSTANT }

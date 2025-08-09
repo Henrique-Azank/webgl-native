@@ -1,0 +1,7 @@
+@use '@sass/base/fonts';
+@use '@sass/base/colors';
+@use '@sass/utilities/functions' as *;
+
+.examplePage {
+ background-color: colors.$canacBlue;
+}
