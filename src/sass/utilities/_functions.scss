@@ -1,0 +1,12 @@
+// Utility functions
+
+// Convert pixels to rem
+@function px-to-rem($px, $base: 16px) {
+  @return calc($px / $base) * 1rem;
+}
+
+// Convert pixels to em
+@function px-to-em($px, $base: 16px) {
+  @return calc($px / $base) * 1em;
+}
+

@@ -4,6 +4,9 @@
 import useNavigate from "@/hooks/useNavigate";
 
 // Component dependencies
+import MainBackground from "@/components/MainBackground";
+
+// Component dependencies
 import Styles from "./page.module.scss";
 
 // Main page component
@@ -12,24 +15,18 @@ export default function Page() {
   const navigate = useNavigate();
 
   return (
+    // Main page container
     <div className={Styles.MainPage}>
-      {/* Main Title / Header for the WebGL Native App */}
-      <div>
-        <h1 className={Styles.Text}>WebGL Native App</h1>
-      </div>
-
-      {/* Examples navigator */}
-      <div>
-        {/* Example 1 - Basic rendering of a 2D object using pure WebGL */}
-        <div className={Styles.Text} onClick={navigate("/examples/basic-2d")}>
-          <h3>Basic 2D rendering using WebGL</h3>
+      {/* Main background for the main menu */}
+      <MainBackground>
+        {/* Main Title / Header for the WebGL Native App */}
+        <div>
+          <h1 className={Styles.Text}>WebGL Native App</h1>
         </div>
 
-        {/* Example 2 - Basic rendering of a 3D object using pure WebGL */}
-        <div className={Styles.Text} onClick={navigate("/examples/basic-3d")}>
-          <h3>Basic 3D rendering using WebGL</h3>
-        </div>
-      </div>
+        {/* Examples navigator */}
+        <div></div>
+      </MainBackground>
     </div>
   );
 }

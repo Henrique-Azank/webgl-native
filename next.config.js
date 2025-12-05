@@ -17,6 +17,24 @@ const nextConfig = {
 
   // Remove the small dev indicator overlay
   devIndicators: false,
+
+  // Configure Sass options
+  sassOptions: {
+    includePaths: ['./src'],
+    additionalData: (content, loaderContext) => {
+      return content;
+    },
+    importer: [
+      function(url) {
+        if (url.startsWith('@sass/')) {
+          return {
+            file: url.replace('@sass/', './src/sass/')
+          };
+        }
+        return null;
+      }
+    ],
+  },
 };
 
 export default nextConfig;

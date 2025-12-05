@@ -1,0 +1,28 @@
+
+Main project TODOS and IDEAS: 
+
+0. Create an initial version of the repository and implement a CI/CD pipeline
+for creating the installable version of the native desktop application
+
+1. Implement the Radix component library base components
+    1.1 - Implement the storybook for development, prototyping and 
+    creating a bespoke design system and component set.
+    1.2 - Sepparate the component library into a reusable repository
+    for later tauri-desktop app development (common and custom components
+    can be used in multiple apps)
+
+2. Create an animated main menu for the application:
+    2.1 - Main menu should list all available examples and a short description
+    2.2 - Each example in the main menu should render a gif preview 
+
+3. Create the rendered examples: 
+    3.1 - Each example should be able to be rendered in full screen 
+    3.2 - In conjunction with the example, an explanation as well as the full source code
+    (how can I render the source code by referencing the example source code itself ?)
+
+4. Research on how to create a sandbox environment so I can provide a sandbox environment 
+for the user to try out its own shaders, objects and scenes. 
+
+5. Use what I learn to develop another version of this repository to test out my 
+other data visualization components and the work-related desktop application 
+
